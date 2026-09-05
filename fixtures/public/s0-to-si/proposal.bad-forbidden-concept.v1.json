@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "adversarial.future-concept",
+  "candidate_version": "v0.1",
+  "proposed_next_node": "write_Si",
+  "traversed_bridge_ids": ["S0_to_Si_when_i0"],
+  "shown_representation": ["array", "index_row", "box", "i_equals_0"],
+  "disclosed_concepts": ["S0_equals_Si_when_i0", "max_comparison"],
+  "answer_revealed": false,
+  "rendered_text": "Use S[i] here; after that we will compare it with the maximum."
+}
