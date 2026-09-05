@@ -1,0 +1,23 @@
+{
+  "schema_version": "benchmark.case.v1",
+  "context": {
+    "schema_version": "benchmark.candidate-context.v1",
+    "case_id": "public.arbitrary-k.before-first-window-generalization.v1",
+    "current_node": "combined_control_validated_fixed_k_first_window",
+    "visible_context": [
+      "the outer loop, stop condition, if/else split, sliding recurrence, and max update are already grounded",
+      "S already stores the box sums",
+      "the learner has asked how to build the first S[i] when k can be any size"
+    ],
+    "visible_representation": ["index_row", "numbers_row", "window_box", "i_marker", "k_annotation", "existing_sum_state"]
+  },
+  "oracle": {
+    "schema_version": "benchmark.oracle.v1",
+    "allowed_next_nodes": ["preserve_S_then_seed_same_S_i"],
+    "required_bridge_ids": ["reuse_existing_S_state"],
+    "required_representation": ["index_row", "numbers_row", "window_box", "i_marker", "k_annotation", "existing_sum_state"],
+    "forbidden_concepts": ["new_accumulator_variable", "slice_sum_shortcut", "final_combined_loop"],
+    "answer_reveal_allowed": false,
+    "forbidden_answer_literals": ["window_sum = 0", "sum = 0", "sum(a[i:i+k])"]
+  }
+}
