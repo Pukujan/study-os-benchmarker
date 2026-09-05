@@ -65,6 +65,14 @@ class Violation(StrictFrozenModel):
     detail: str = Field(min_length=1)
 
 
+class MetricSummary(StrictFrozenModel):
+    legal_next_node: bool
+    required_bridges_preserved: bool
+    representation_preserved: bool
+    forbidden_concepts_absent: bool
+    answer_policy_satisfied: bool
+
+
 class BenchmarkReport(StrictFrozenModel):
     schema_version: str = Field(pattern=r"^benchmark\.report\.v1$")
     evaluator_version: str = Field(min_length=1)
@@ -75,7 +83,7 @@ class BenchmarkReport(StrictFrozenModel):
     violations: tuple[Violation, ...]
     case_digest: str = Field(pattern=r"^[0-9a-f]{64}$")
     proposal_digest: str = Field(pattern=r"^[0-9a-f]{64}$")
-    metrics: dict[str, int | bool]
+    metrics: MetricSummary
 
 
 def canonical_json_bytes(value: BaseModel | dict[str, Any]) -> bytes:
