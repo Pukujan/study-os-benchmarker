@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "mutant-direct-recurrence",
+  "candidate_version": "v1",
+  "proposed_next_node": "general_recurrence",
+  "traversed_bridge_ids": [],
+  "shown_representation": ["numbers_row", "current_box", "next_box"],
+  "disclosed_concepts": ["general_recurrence"],
+  "answer_revealed": false,
+  "rendered_text": "Jump directly from sum[i] to the generalized recurrence."
+}
