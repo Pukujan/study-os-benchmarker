@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "public.fixture.good-restore",
+  "candidate_version": "1.0.0",
+  "proposed_next_node": "restore_source_representation_for_validation",
+  "traversed_bridge_ids": ["restore_source_representation_after_code"],
+  "shown_representation": ["loop_code", "s_row", "index_row", "numbers_row", "window_box", "s_i_mapping"],
+  "disclosed_concepts": ["loop_output_mapping"],
+  "answer_revealed": true,
+  "rendered_text": "Keep the code result visible, restore the original indexed array and each fixed-width box, attach each S[i] to its box, then compare the stored list with those window sums."
+}
