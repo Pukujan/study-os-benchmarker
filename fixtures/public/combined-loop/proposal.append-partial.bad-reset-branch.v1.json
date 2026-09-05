@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "public.combined-loop.bad-reset-branch",
+  "candidate_version": "v1",
+  "proposed_next_node": "reteach_entire_later_box_branch",
+  "traversed_bridge_ids": [],
+  "shown_representation": ["index_row", "numbers_row", "window_box", "recurrence", "representation_bridge", "preserved_correct_part"],
+  "disclosed_concepts": ["reteach_max_condition"],
+  "answer_revealed": true,
+  "rendered_text": "Let's restart the whole else branch, including the max comparison you already got right."
+}
