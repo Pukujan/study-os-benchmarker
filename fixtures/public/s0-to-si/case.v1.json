@@ -1,0 +1,23 @@
+{
+  "schema_version": "benchmark.case.v1",
+  "context": {
+    "schema_version": "benchmark.candidate-context.v1",
+    "case_id": "public.s0-to-si.v1",
+    "current_node": "write_S0",
+    "visible_context": [
+      "i = 0",
+      "max_sum already stores S[0]",
+      "learner should rewrite the same relation using S[i] without being shown the target line"
+    ],
+    "visible_representation": ["array", "index_row", "box", "i_equals_0"]
+  },
+  "oracle": {
+    "schema_version": "benchmark.oracle.v1",
+    "allowed_next_nodes": ["write_Si"],
+    "required_bridge_ids": ["S0_to_Si_when_i0"],
+    "required_representation": ["array", "index_row", "box", "i_equals_0"],
+    "forbidden_concepts": ["max_comparison"],
+    "answer_reveal_allowed": false,
+    "forbidden_answer_literals": ["max_sum = S[i]"]
+  }
+}
