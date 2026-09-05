@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "public.fixture.bad-detached-s",
+  "candidate_version": "1.0.0",
+  "proposed_next_node": "restore_source_representation_for_validation",
+  "traversed_bridge_ids": ["restore_source_representation_after_code"],
+  "shown_representation": ["loop_code", "s_row"],
+  "disclosed_concepts": ["loop_output_mapping"],
+  "answer_revealed": true,
+  "rendered_text": "The loop produced S. Does this list match the sums from earlier?"
+}
