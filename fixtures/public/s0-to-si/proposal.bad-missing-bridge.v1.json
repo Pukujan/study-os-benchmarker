@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "adversarial.missing-bridge",
+  "candidate_version": "v0.1",
+  "proposed_next_node": "write_Si",
+  "traversed_bridge_ids": [],
+  "shown_representation": ["array", "index_row", "box", "i_equals_0"],
+  "disclosed_concepts": ["S0_equals_Si_when_i0"],
+  "answer_revealed": false,
+  "rendered_text": "Keep the same chart and write the same line using S[i]."
+}
