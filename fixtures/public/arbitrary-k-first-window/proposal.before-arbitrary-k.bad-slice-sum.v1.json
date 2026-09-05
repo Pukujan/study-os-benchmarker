@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "public-fixture",
+  "candidate_version": "arbitrary-k-bad-slice-sum-v1",
+  "proposed_next_node": "replace_with_slice_sum",
+  "traversed_bridge_ids": [],
+  "shown_representation": ["index_row", "numbers_row", "window_box", "i_marker", "k_annotation", "existing_sum_state"],
+  "disclosed_concepts": ["slice_sum_shortcut"],
+  "answer_revealed": false,
+  "rendered_text": "Use S.append(sum(a[i:i+k])) for the first box."
+}

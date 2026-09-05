@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "public-fixture",
+  "candidate_version": "arbitrary-k-bad-reveal-update-v1",
+  "proposed_next_node": "probe_same_S_i_update",
+  "traversed_bridge_ids": ["range_to_same_S_i_update"],
+  "shown_representation": ["index_row", "numbers_row", "window_box", "i_marker", "k_annotation", "range_sequence", "current_s_before", "code_skeleton"],
+  "disclosed_concepts": ["same_s_update"],
+  "answer_revealed": true,
+  "rendered_text": "Write this inside the loop: S[i] = S[i] + a[i+x]"
+}

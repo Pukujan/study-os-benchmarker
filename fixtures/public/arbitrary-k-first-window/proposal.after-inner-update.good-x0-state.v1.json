@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "public-fixture",
+  "candidate_version": "arbitrary-k-good-x0-state-v1",
+  "proposed_next_node": "render_x0_state",
+  "traversed_bridge_ids": ["same_S_i_state_trace"],
+  "shown_representation": ["index_row", "numbers_row", "window_box", "i_marker", "k_annotation", "x_marker", "current_s_before", "current_number", "state_transition"],
+  "disclosed_concepts": ["same_s_state_transition"],
+  "answer_revealed": false,
+  "rendered_text": "i = 0, k = 3, x = 0, S[i] = 0. The same box stays visible. a[i+x] is 2, so S[i]: 0 + 2 -> 2."
+}

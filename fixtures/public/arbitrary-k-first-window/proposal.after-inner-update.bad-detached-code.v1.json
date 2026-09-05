@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "public-fixture",
+  "candidate_version": "arbitrary-k-bad-detached-code-v1",
+  "proposed_next_node": "render_x0_state",
+  "traversed_bridge_ids": ["same_S_i_state_trace"],
+  "shown_representation": ["inner_loop_code"],
+  "disclosed_concepts": ["same_s_state_transition"],
+  "answer_revealed": false,
+  "rendered_text": "The inner loop is correct. x moves and S[i] changes."
+}
