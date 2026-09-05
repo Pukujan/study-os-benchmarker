@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "public.fixture.bad-direct-max",
+  "candidate_version": "1.0.0",
+  "proposed_next_node": "introduce_max_builtin",
+  "traversed_bridge_ids": [],
+  "shown_representation": ["i_row", "s_row", "i_to_s_alignment"],
+  "disclosed_concepts": ["max_builtin", "max_sum_assignment"],
+  "answer_revealed": false,
+  "rendered_text": "S is verified, so use max_sum = max(S)."
+}

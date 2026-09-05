@@ -32,6 +32,14 @@ def load_proposal(name: str) -> TutorProposal:
             "case.after-si-validation.v1.json",
             "proposal.after-si-validation.good-comparison.v1.json",
         ),
+        (
+            "case.after-restored-window-sums.v1.json",
+            "proposal.after-restored.good-location-probe.v1.json",
+        ),
+        (
+            "case.after-max-assignment-explained.v1.json",
+            "proposal.after-max-assignment.good-changed-probe.v1.json",
+        ),
     ],
 )
 def test_calibrated_next_moves_pass(case_name: str, proposal_name: str) -> None:
@@ -78,6 +86,16 @@ def test_calibrated_next_moves_pass(case_name: str, proposal_name: str) -> None:
             "proposal.after-si.bad-comparison-before-validation.v1.json",
             (ViolationCode.ILLEGAL_NEXT_NODE, ViolationCode.FORBIDDEN_CONCEPT_DISCLOSED),
         ),
+        (
+            "case.after-restored-window-sums.v1.json",
+            "proposal.after-restored.bad-direct-max.v1.json",
+            (ViolationCode.ILLEGAL_NEXT_NODE, ViolationCode.FORBIDDEN_CONCEPT_DISCLOSED),
+        ),
+        (
+            "case.after-max-assignment-explained.v1.json",
+            "proposal.after-max-assignment.bad-answer-leak.v1.json",
+            (ViolationCode.ANSWER_REVEAL_FORBIDDEN,),
+        ),
     ],
 )
 def test_observed_and_semantic_shortcut_mutations_fail(
@@ -90,8 +108,16 @@ def test_observed_and_semantic_shortcut_mutations_fail(
     assert tuple(violation.code for violation in report.violations) == expected_codes
 
 
-def test_si_bridge_case_keeps_oracle_answer_out_of_candidate_context() -> None:
-    raw = json.loads((FIXTURE_DIR / "case.after-s0-validation.v1.json").read_text())
+@pytest.mark.parametrize(
+    "case_name",
+    [
+        "case.after-s0-validation.v1.json",
+        "case.after-restored-window-sums.v1.json",
+        "case.after-max-assignment-explained.v1.json",
+    ],
+)
+def test_oracle_answers_stay_out_of_candidate_context(case_name: str) -> None:
+    raw = json.loads((FIXTURE_DIR / case_name).read_text())
     candidate_visible = json.dumps(raw["context"], sort_keys=True)
     for forbidden_literal in raw["oracle"]["forbidden_answer_literals"]:
         assert forbidden_literal not in candidate_visible
