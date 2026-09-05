@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "fixture.good.s0-to-si-bridge",
+  "candidate_version": "v1",
+  "proposed_next_node": "probe_si_assignment_changed_example",
+  "traversed_bridge_ids": ["s0_to_si_when_i0"],
+  "shown_representation": ["index_row", "numbers_row", "window_box", "i_marker", "sum_annotation"],
+  "disclosed_concepts": ["s0_to_si_bridge"],
+  "answer_revealed": false,
+  "rendered_text": "Hint: i = 0, so S[0] and S[i] name the same current entry. On the changed chart, write the max_sum line using S[i]."
+}
