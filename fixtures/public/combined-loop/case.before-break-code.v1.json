@@ -1,0 +1,23 @@
+{
+  "schema_version": "benchmark.case.v1",
+  "context": {
+    "schema_version": "benchmark.candidate-context.v1",
+    "case_id": "public.combined-loop.before-break-code.v1",
+    "current_node": "combined_first_and_later_box_roles_validated",
+    "visible_context": [
+      "the combined first-box and later-box roles are stable",
+      "the learner has identified that a stop condition is the next missing piece",
+      "len(a) has not yet been taught and must be grounded before the break code"
+    ],
+    "visible_representation": ["numbers_row", "len_concept"]
+  },
+  "oracle": {
+    "schema_version": "benchmark.oracle.v1",
+    "allowed_next_nodes": ["explain_len_before_boundary_code"],
+    "required_bridge_ids": ["len_before_boundary_code"],
+    "required_representation": ["numbers_row", "len_concept"],
+    "forbidden_concepts": ["break_code", "arbitrary_k_first_window", "final_combined_loop"],
+    "answer_reveal_allowed": false,
+    "forbidden_answer_literals": ["if i > len(a) - k:", "break"]
+  }
+}
