@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "public-fixture",
+  "candidate_version": "arbitrary-k-bad-final-loop-v1",
+  "proposed_next_node": "show_full_combined_loop",
+  "traversed_bridge_ids": ["same_S_i_state_trace"],
+  "shown_representation": ["index_row", "numbers_row", "window_box", "i_marker", "k_annotation", "x_marker", "current_s_before", "current_number", "state_transition"],
+  "disclosed_concepts": ["final_combined_loop"],
+  "answer_revealed": true,
+  "rendered_text": "Now all the pieces fit together; here is the complete combined loop."
+}
