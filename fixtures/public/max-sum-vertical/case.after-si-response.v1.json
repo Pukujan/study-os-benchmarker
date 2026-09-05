@@ -1,0 +1,22 @@
+{
+  "schema_version": "benchmark.case.v1",
+  "context": {
+    "schema_version": "benchmark.candidate-context.v1",
+    "case_id": "public.max-sum.after-si-response.v1",
+    "current_node": "learner_produced_si_assignment",
+    "visible_context": [
+      "learner produced max_sum = S[i] while i = 0",
+      "the next move must validate that answer in the same changed chart before comparison"
+    ],
+    "visible_representation": ["index_row", "numbers_row", "window_box", "i_marker", "sum_annotation"]
+  },
+  "oracle": {
+    "schema_version": "benchmark.oracle.v1",
+    "allowed_next_nodes": ["validate_si_assignment_same_chart"],
+    "required_bridge_ids": [],
+    "required_representation": ["index_row", "numbers_row", "window_box", "i_marker", "sum_annotation"],
+    "forbidden_concepts": ["comparison", "next_window", "max_loop"],
+    "answer_reveal_allowed": true,
+    "forbidden_answer_literals": []
+  }
+}
