@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "public.max-loop.bad-show-full-loop",
+  "candidate_version": "v1",
+  "proposed_next_node": "show_full_max_loop",
+  "traversed_bridge_ids": [],
+  "shown_representation": ["i_row", "s_row", "code_skeleton"],
+  "disclosed_concepts": ["standalone_max_loop_solution"],
+  "answer_revealed": true,
+  "rendered_text": "max_sum = S[0]\nfor i, num in enumerate(S):\n    if S[i] > max_sum:\n        max_sum = S[i]"
+}
