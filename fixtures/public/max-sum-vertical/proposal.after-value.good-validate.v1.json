@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "fixture.good.validate-value",
+  "candidate_version": "v1",
+  "proposed_next_node": "validate_value_same_chart",
+  "traversed_bridge_ids": [],
+  "shown_representation": ["index_row", "numbers_row", "window_box", "i_marker", "sum_annotation"],
+  "disclosed_concepts": [],
+  "answer_revealed": true,
+  "rendered_text": "The same chart shows S[0] = 11. Since max_sum = S[0], max_sum is 11. That is why the learner's answer was correct."
+}
