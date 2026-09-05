@@ -1,0 +1,27 @@
+{
+  "schema_version": "benchmark.case.v1",
+  "context": {
+    "schema_version": "benchmark.candidate-context.v1",
+    "case_id": "enumerate.after-pair36-response",
+    "current_node": "learner.correct.pair_36",
+    "visible_context": ["learner answered 3,6 to the enumerate pair probe"],
+    "visible_representation": ["numbers_row", "index_row", "number_row", "enumerate_relation"]
+  },
+  "oracle": {
+    "schema_version": "benchmark.oracle.v1",
+    "allowed_next_nodes": ["validate_pair_36_same_chart"],
+    "required_bridge_ids": [],
+    "required_representation": [
+      "numbers_row",
+      "index_row",
+      "number_row",
+      "pair_row",
+      "enumerate_relation",
+      "current_pair_highlight"
+    ],
+    "forbidden_representation": ["window_box"],
+    "forbidden_concepts": ["append", "sliding_recurrence", "max_sum"],
+    "answer_reveal_allowed": true,
+    "forbidden_answer_literals": []
+  }
+}
