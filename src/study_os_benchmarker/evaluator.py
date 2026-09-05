@@ -10,7 +10,7 @@ from .models import (
     canonical_sha256,
 )
 
-EVALUATOR_VERSION = "study-os-benchmarker.evaluator.v0.1.0"
+EVALUATOR_VERSION = "study-os-benchmarker.evaluator.v0.2.0"
 
 
 def evaluate(case: BenchmarkCase, proposal: TutorProposal) -> BenchmarkReport:
@@ -54,6 +54,21 @@ def evaluate(case: BenchmarkCase, proposal: TutorProposal) -> BenchmarkReport:
             )
         )
 
+    forbidden_representation = sorted(
+        set(oracle.forbidden_representation).intersection(proposal.shown_representation)
+    )
+    forbidden_representation_absent = not forbidden_representation
+    if forbidden_representation:
+        violations.append(
+            Violation(
+                code=ViolationCode.FORBIDDEN_REPRESENTATION_PRESENT,
+                detail=(
+                    "forbidden representation present: "
+                    f"{', '.join(forbidden_representation)}"
+                ),
+            )
+        )
+
     disclosed_forbidden = sorted(
         set(oracle.forbidden_concepts).intersection(proposal.disclosed_concepts)
     )
@@ -91,6 +106,7 @@ def evaluate(case: BenchmarkCase, proposal: TutorProposal) -> BenchmarkReport:
         legal_next_node=legal_next_node,
         required_bridges_preserved=required_bridges_preserved,
         representation_preserved=representation_preserved,
+        forbidden_representation_absent=forbidden_representation_absent,
         forbidden_concepts_absent=forbidden_concepts_absent,
         answer_policy_satisfied=answer_policy_satisfied,
     )
