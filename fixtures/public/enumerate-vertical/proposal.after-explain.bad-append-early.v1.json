@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "mutation.enumerate",
+  "candidate_version": "append-early.v1",
+  "proposed_next_node": "append",
+  "traversed_bridge_ids": [],
+  "shown_representation": ["numbers_row", "index_row", "number_row", "enumerate_relation"],
+  "disclosed_concepts": ["append"],
+  "answer_revealed": false,
+  "rendered_text": "Now let us move to append."
+}
