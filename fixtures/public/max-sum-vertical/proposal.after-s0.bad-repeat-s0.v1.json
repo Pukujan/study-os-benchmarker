@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "fixture.bad.repeat-s0-after-mastery",
+  "candidate_version": "v1",
+  "proposed_next_node": "probe_s0_assignment_again",
+  "traversed_bridge_ids": [],
+  "shown_representation": ["index_row", "numbers_row", "window_box", "i_marker", "sum_annotation"],
+  "disclosed_concepts": [],
+  "answer_revealed": false,
+  "rendered_text": "Here is another changed array. Write the line that saves S[0] into max_sum again."
+}
