@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "golden-successive-sums",
+  "candidate_version": "v1",
+  "proposed_next_node": "sum_i_plus_2_probe",
+  "traversed_bridge_ids": ["successive_sum_i2"],
+  "shown_representation": ["numbers_row", "current_box", "next_box"],
+  "disclosed_concepts": ["sum_i", "i_changes_box"],
+  "answer_revealed": false,
+  "rendered_text": "Use the same two-box chart on a changed i and ask for the next successive sum."
+}

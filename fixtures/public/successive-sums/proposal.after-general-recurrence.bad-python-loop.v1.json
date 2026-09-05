@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "mutant-premature-python-loop",
+  "candidate_version": "v1",
+  "proposed_next_node": "python_loop",
+  "traversed_bridge_ids": [],
+  "shown_representation": ["numbers_row", "window_box", "recurrence_equation"],
+  "disclosed_concepts": ["general_recurrence", "python_loop"],
+  "answer_revealed": false,
+  "rendered_text": "Jump directly from the generalized recurrence to the Python loop."
+}

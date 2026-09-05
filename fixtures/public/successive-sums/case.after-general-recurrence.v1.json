@@ -1,0 +1,23 @@
+{
+  "schema_version": "benchmark.case.v1",
+  "context": {
+    "schema_version": "benchmark.candidate-context.v1",
+    "case_id": "successive-sums.after-general-recurrence",
+    "current_node": "general_recurrence_introduced",
+    "visible_context": [
+      "The learner has just seen the generalized recurrence after concrete successive sums.",
+      "The recurrence must now be instantiated repeatedly as i changes before Python translation."
+    ],
+    "visible_representation": ["numbers_row", "window_box", "recurrence_equation"]
+  },
+  "oracle": {
+    "schema_version": "benchmark.oracle.v1",
+    "allowed_next_nodes": ["recurrence_i1_probe"],
+    "required_bridge_ids": ["repeat_recurrence_across_i"],
+    "required_representation": ["numbers_row", "window_box", "recurrence_equation"],
+    "forbidden_representation": [],
+    "forbidden_concepts": ["python_loop"],
+    "answer_reveal_allowed": false,
+    "forbidden_answer_literals": ["S[1] = 14", "answer is 14"]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "mutant-skip-successive-probe",
+  "candidate_version": "v1",
+  "proposed_next_node": "sum_i_plus_3_probe",
+  "traversed_bridge_ids": [],
+  "shown_representation": ["numbers_row", "current_box", "next_box"],
+  "disclosed_concepts": ["sum_i", "i_changes_box"],
+  "answer_revealed": false,
+  "rendered_text": "Skip the changed sum[i+2] exercise and move directly to a later box."
+}
