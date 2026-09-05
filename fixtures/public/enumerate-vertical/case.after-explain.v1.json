@@ -1,0 +1,33 @@
+{
+  "schema_version": "benchmark.case.v1",
+  "context": {
+    "schema_version": "benchmark.candidate-context.v1",
+    "case_id": "enumerate.after-explain",
+    "current_node": "explain_enumerate_in_chart",
+    "visible_context": [
+      "enumerate(a) has been explained as current index plus current number",
+      "learner requested a question asking for the pair at a specific number"
+    ],
+    "visible_representation": [
+      "numbers_row",
+      "index_row",
+      "number_row",
+      "enumerate_relation"
+    ]
+  },
+  "oracle": {
+    "schema_version": "benchmark.oracle.v1",
+    "allowed_next_nodes": ["probe_pair_for_6"],
+    "required_bridge_ids": [],
+    "required_representation": [
+      "numbers_row",
+      "index_row",
+      "number_row",
+      "enumerate_relation"
+    ],
+    "forbidden_representation": ["pair_row", "window_box"],
+    "forbidden_concepts": ["append", "sliding_recurrence", "max_sum"],
+    "answer_reveal_allowed": false,
+    "forbidden_answer_literals": ["(3,6)", "(3, 6)", "3,6", "3, 6"]
+  }
+}
