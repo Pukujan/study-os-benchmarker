@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "mutant-detached-recurrence",
+  "candidate_version": "v1",
+  "proposed_next_node": "recurrence_i1_probe",
+  "traversed_bridge_ids": ["repeat_recurrence_across_i"],
+  "shown_representation": ["recurrence_equation"],
+  "disclosed_concepts": ["general_recurrence", "i_changes_box"],
+  "answer_revealed": false,
+  "rendered_text": "Show only the recurrence equation and remove the original numbers and box."
+}
