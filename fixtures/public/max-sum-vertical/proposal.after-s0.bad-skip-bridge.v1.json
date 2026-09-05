@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "fixture.bad.skip-s0-to-si-bridge",
+  "candidate_version": "v1",
+  "proposed_next_node": "probe_si_assignment_changed_example",
+  "traversed_bridge_ids": [],
+  "shown_representation": ["index_row", "numbers_row", "window_box", "i_marker", "sum_annotation"],
+  "disclosed_concepts": [],
+  "answer_revealed": false,
+  "rendered_text": "On this changed chart, rewrite the max_sum line using the current index form."
+}
