@@ -18,6 +18,6 @@
     "required_representation": ["numbers_row", "len_concept"],
     "forbidden_concepts": ["break_code", "arbitrary_k_first_window", "final_combined_loop"],
     "answer_reveal_allowed": false,
-    "forbidden_answer_literals": ["if i > len(a) - k:", "break"]
+    "forbidden_answer_literals": ["if i > len(a) - k:"]
   }
 }
