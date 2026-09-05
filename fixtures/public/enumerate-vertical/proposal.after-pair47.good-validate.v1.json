@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "reference.enumerate",
+  "candidate_version": "v0.1",
+  "proposed_next_node": "validate_pair_47_same_chart",
+  "traversed_bridge_ids": [],
+  "shown_representation": ["numbers_row", "index_row", "number_row", "pair_row", "enumerate_relation", "current_pair_highlight"],
+  "disclosed_concepts": ["enumerate_relation"],
+  "answer_revealed": true,
+  "rendered_text": "Index 4 lines up with number 7, so enumerate gives (4,7)."
+}
