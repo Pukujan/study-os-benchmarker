@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "public-fixture",
+  "candidate_version": "final-loop-bad-mastery-v1",
+  "proposed_next_node": "expose_final_combined_loop",
+  "traversed_bridge_ids": ["assemble_grounded_pieces"],
+  "shown_representation": ["full_combined_code", "control_structure_summary"],
+  "disclosed_concepts": ["final_combined_loop", "assembled_solution", "mastery_claim"],
+  "answer_revealed": true,
+  "rendered_text": "Here is the complete assembled loop. You have mastered the full problem."
+}
