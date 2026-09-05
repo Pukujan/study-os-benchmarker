@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "fixture.bad.next-exercise-before-validation",
+  "candidate_version": "v1",
+  "proposed_next_node": "probe_s0_assignment",
+  "traversed_bridge_ids": [],
+  "shown_representation": ["index_row", "numbers_row", "window_box", "i_marker", "sum_annotation"],
+  "disclosed_concepts": [],
+  "answer_revealed": false,
+  "rendered_text": "Write the Python line that saves S[0] into max_sum."
+}
