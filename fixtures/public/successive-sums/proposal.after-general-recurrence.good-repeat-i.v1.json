@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "golden-repeated-recurrence",
+  "candidate_version": "v1",
+  "proposed_next_node": "recurrence_i1_probe",
+  "traversed_bridge_ids": ["repeat_recurrence_across_i"],
+  "shown_representation": ["numbers_row", "window_box", "recurrence_equation"],
+  "disclosed_concepts": ["general_recurrence", "i_changes_box"],
+  "answer_revealed": false,
+  "rendered_text": "Keep the array and box visible, instantiate the recurrence for i = 1, and ask the learner to compute it before moving toward code."
+}
