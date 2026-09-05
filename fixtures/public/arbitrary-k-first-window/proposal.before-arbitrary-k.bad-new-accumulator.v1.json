@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "public-fixture",
+  "candidate_version": "arbitrary-k-bad-new-accumulator-v1",
+  "proposed_next_node": "introduce_window_sum_accumulator",
+  "traversed_bridge_ids": [],
+  "shown_representation": ["index_row", "numbers_row", "window_box", "i_marker", "k_annotation", "existing_sum_state"],
+  "disclosed_concepts": ["new_accumulator_variable"],
+  "answer_revealed": false,
+  "rendered_text": "Start a new variable: window_sum = 0. Then use it to accumulate the first box."
+}
