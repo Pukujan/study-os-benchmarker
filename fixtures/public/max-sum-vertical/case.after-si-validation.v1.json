@@ -1,0 +1,23 @@
+{
+  "schema_version": "benchmark.case.v1",
+  "context": {
+    "schema_version": "benchmark.candidate-context.v1",
+    "case_id": "public.max-sum.after-si-validation.v1",
+    "current_node": "validate_si_assignment_same_chart",
+    "visible_context": [
+      "learner's max_sum = S[i] assignment has been validated while i = 0",
+      "comparison is now authorized for the first time",
+      "move the box to i = 1 and compare the current window sum with max_sum"
+    ],
+    "visible_representation": ["index_row", "numbers_row", "window_box", "i_marker", "sum_annotation", "max_sum_annotation"]
+  },
+  "oracle": {
+    "schema_version": "benchmark.oracle.v1",
+    "allowed_next_nodes": ["probe_first_comparison"],
+    "required_bridge_ids": [],
+    "required_representation": ["index_row", "numbers_row", "window_box", "i_marker", "sum_annotation", "max_sum_annotation"],
+    "forbidden_concepts": ["max_loop"],
+    "answer_reveal_allowed": false,
+    "forbidden_answer_literals": ["yes"]
+  }
+}
