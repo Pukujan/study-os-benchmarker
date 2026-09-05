@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "reference.enumerate",
+  "candidate_version": "v0.1",
+  "proposed_next_node": "append",
+  "traversed_bridge_ids": [],
+  "shown_representation": [],
+  "disclosed_concepts": ["append"],
+  "answer_revealed": false,
+  "rendered_text": "Okay. We will move to append now."
+}
