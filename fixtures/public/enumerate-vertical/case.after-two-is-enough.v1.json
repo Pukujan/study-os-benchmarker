@@ -1,0 +1,30 @@
+{
+  "schema_version": "benchmark.case.v1",
+  "context": {
+    "schema_version": "benchmark.candidate-context.v1",
+    "case_id": "enumerate.after-two-is-enough",
+    "current_node": "learner.meta.two_is_enough",
+    "visible_context": [
+      "two enumerate probes have been answered correctly and validated",
+      "learner explicitly said two are enough and requested append"
+    ],
+    "visible_representation": [
+      "numbers_row",
+      "index_row",
+      "number_row",
+      "pair_row",
+      "enumerate_relation",
+      "current_pair_highlight"
+    ]
+  },
+  "oracle": {
+    "schema_version": "benchmark.oracle.v1",
+    "allowed_next_nodes": ["append"],
+    "required_bridge_ids": [],
+    "required_representation": [],
+    "forbidden_representation": ["window_box"],
+    "forbidden_concepts": ["third_enumerate_exercise"],
+    "answer_reveal_allowed": true,
+    "forbidden_answer_literals": []
+  }
+}
