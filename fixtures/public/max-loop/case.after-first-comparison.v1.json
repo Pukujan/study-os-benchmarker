@@ -1,0 +1,22 @@
+{
+  "schema_version": "benchmark.case.v1",
+  "context": {
+    "schema_version": "benchmark.candidate-context.v1",
+    "case_id": "public.max-loop.after-first-comparison.v1",
+    "current_node": "first_concrete_comparison_validated",
+    "visible_context": [
+      "the learner has validated one concrete comparison between the current window sum and max_sum",
+      "the next move should keep the chart, move to the next box, and ask for fixed-index comparison code before symbolic generalization"
+    ],
+    "visible_representation": ["index_row", "numbers_row", "window_box", "i_marker", "sum_annotation", "max_sum_annotation"]
+  },
+  "oracle": {
+    "schema_version": "benchmark.oracle.v1",
+    "allowed_next_nodes": ["probe_fixed_index_comparison_code"],
+    "required_bridge_ids": [],
+    "required_representation": ["index_row", "numbers_row", "window_box", "i_marker", "sum_annotation", "max_sum_annotation"],
+    "forbidden_concepts": ["symbolic_comparison", "standalone_max_loop", "combined_loop"],
+    "answer_reveal_allowed": false,
+    "forbidden_answer_literals": ["if S[2] > max_sum:"]
+  }
+}
