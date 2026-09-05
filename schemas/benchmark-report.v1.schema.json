@@ -19,7 +19,7 @@
         "additionalProperties": false,
         "required": ["code", "detail"],
         "properties": {
-          "code": {"enum": ["ILLEGAL_NEXT_NODE", "MISSING_REQUIRED_BRIDGE", "MISSING_REPRESENTATION", "FORBIDDEN_CONCEPT_DISCLOSED", "ANSWER_REVEAL_FORBIDDEN"]},
+          "code": {"enum": ["ILLEGAL_NEXT_NODE", "MISSING_REQUIRED_BRIDGE", "MISSING_REPRESENTATION", "FORBIDDEN_REPRESENTATION_PRESENT", "FORBIDDEN_CONCEPT_DISCLOSED", "ANSWER_REVEAL_FORBIDDEN"]},
           "detail": {"type": "string", "minLength": 1}
         }
       }
@@ -29,11 +29,12 @@
     "metrics": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["legal_next_node", "required_bridges_preserved", "representation_preserved", "forbidden_concepts_absent", "answer_policy_satisfied"],
+      "required": ["legal_next_node", "required_bridges_preserved", "representation_preserved", "forbidden_representation_absent", "forbidden_concepts_absent", "answer_policy_satisfied"],
       "properties": {
         "legal_next_node": {"type": "boolean"},
         "required_bridges_preserved": {"type": "boolean"},
         "representation_preserved": {"type": "boolean"},
+        "forbidden_representation_absent": {"type": "boolean"},
         "forbidden_concepts_absent": {"type": "boolean"},
         "answer_policy_satisfied": {"type": "boolean"}
       }
