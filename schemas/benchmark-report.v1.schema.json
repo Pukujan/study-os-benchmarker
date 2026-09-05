@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pukujan.github.io/study-os-benchmarker/schemas/benchmark-report.v1.schema.json",
+  "title": "Study OS Benchmark Report v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "evaluator_version", "case_id", "candidate_id", "candidate_version", "passed", "violations", "case_digest", "proposal_digest", "metrics"],
+  "properties": {
+    "schema_version": {"const": "benchmark.report.v1"},
+    "evaluator_version": {"type": "string", "minLength": 1},
+    "case_id": {"type": "string", "minLength": 1},
+    "candidate_id": {"type": "string", "minLength": 1},
+    "candidate_version": {"type": "string", "minLength": 1},
+    "passed": {"type": "boolean"},
+    "violations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["code", "detail"],
+        "properties": {
+          "code": {"enum": ["ILLEGAL_NEXT_NODE", "MISSING_REQUIRED_BRIDGE", "MISSING_REPRESENTATION", "FORBIDDEN_CONCEPT_DISCLOSED", "ANSWER_REVEAL_FORBIDDEN"]},
+          "detail": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "case_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "proposal_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["legal_next_node", "required_bridges_preserved", "representation_preserved", "forbidden_concepts_absent", "answer_policy_satisfied"],
+      "properties": {
+        "legal_next_node": {"type": "boolean"},
+        "required_bridges_preserved": {"type": "boolean"},
+        "representation_preserved": {"type": "boolean"},
+        "forbidden_concepts_absent": {"type": "boolean"},
+        "answer_policy_satisfied": {"type": "boolean"}
+      }
+    }
+  }
+}
