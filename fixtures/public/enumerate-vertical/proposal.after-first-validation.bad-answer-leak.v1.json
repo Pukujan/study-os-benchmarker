@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "mutation.enumerate",
+  "candidate_version": "second-answer-leak.v1",
+  "proposed_next_node": "probe_pair_for_7_changed_chart",
+  "traversed_bridge_ids": [],
+  "shown_representation": ["numbers_row", "index_row", "number_row", "enumerate_relation"],
+  "disclosed_concepts": ["enumerate_relation"],
+  "answer_revealed": false,
+  "rendered_text": "The pair is (4,7). In this changed array, what pair does enumerate(a) give for a = 7?"
+}
