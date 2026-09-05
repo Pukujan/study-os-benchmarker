@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "public.fixture.good-location-probe",
+  "candidate_version": "1.0.0",
+  "proposed_next_node": "probe_largest_locations",
+  "traversed_bridge_ids": [],
+  "shown_representation": ["i_row", "s_row", "i_to_s_alignment"],
+  "disclosed_concepts": ["maximum_location"],
+  "answer_revealed": false,
+  "rendered_text": "i: 0 1 2 3\nS: 11 13 11 13\nWhich entries in S hold the largest value?"
+}
