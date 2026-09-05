@@ -3,22 +3,20 @@
 ## Architecture
 
 ```text
-JSON benchmark case
-        ↓
-strict contract model
-        ↓
-Candidate adapter
-        ↓
-normalized TutorProposal
-        ↓
-deterministic Evaluator
-        ↓
-Violation[] + metric results
-        ↓
-canonical BenchmarkReport JSON
+BenchmarkCase envelope
+   ├── CandidateContext ──→ candidate adapter
+   └── BenchmarkOracle ───→ evaluator only
+                               ↑
+TutorProposal ─────────────────┘
+                               ↓
+                    deterministic Evaluator
+                               ↓
+                 Violation[] + metric results
+                               ↓
+                 canonical BenchmarkReport JSON
 ```
 
-The evaluator is deliberately independent of candidate implementation.
+The evaluator is deliberately independent of candidate implementation. The runner must pass only `CandidateContext` to a candidate; `BenchmarkOracle` is evaluator-side state.
 
 ## Initial package
 
@@ -32,21 +30,39 @@ No plugin framework in v0.1. Candidate adapters may implement a tiny protocol la
 
 ## Contract objects
 
-### BenchmarkCase
+### CandidateContext
 
-Candidate-visible fields:
+This is the entire candidate-visible payload for the first contract version:
 
 - `schema_version`
 - `case_id`
 - `current_node`
+- `visible_context`
+- `visible_representation`
+
+It must not contain evaluator-only expected next nodes, required bridge lists, forbidden answer literals, or hidden expected outcomes.
+
+### BenchmarkOracle
+
+Evaluator-only expectations:
+
 - `allowed_next_nodes`
 - `required_bridge_ids`
 - `required_representation`
 - `forbidden_concepts`
 - `answer_reveal_allowed`
-- `visible_context`
+- `forbidden_answer_literals`
 
-Evaluator-only expected target text/answers MUST NOT be stored in this candidate-visible object.
+A public regression fixture may serialize an oracle beside its context for reproducibility, but candidate adapters must never receive that object. Sealed holdout oracles do not belong in this public repository at all.
+
+### BenchmarkCase
+
+An evaluator envelope containing exactly:
+
+- `CandidateContext`
+- `BenchmarkOracle`
+
+The evaluator hashes the full case; the candidate runner exposes only `case.context`.
 
 ### TutorProposal
 
@@ -58,7 +74,9 @@ Normalized candidate output:
 - disclosed concepts;
 - whether target answer was revealed;
 - rendered text;
-- optional candidate metadata.
+- candidate ID/version.
+
+Candidate self-report is not authoritative. For example, `answer_revealed=false` does not prevent the evaluator from detecting a forbidden literal in `rendered_text`.
 
 ### Violation
 
@@ -79,8 +97,8 @@ Initial violation codes:
 - candidate ID/version;
 - pass/fail;
 - violations in deterministic stable order;
-- canonical input/proposal digests;
-- metrics.
+- canonical case/proposal digests;
+- immutable metric summary.
 
 ## Determinism
 
@@ -105,12 +123,13 @@ This is an evaluator/report identity mechanism, not a replacement for PIR's own 
 
 ## Validation layers
 
-1. strict Python boundary models;
-2. independent JSON Schema Draft 2020-12 fixtures/contracts;
-3. deterministic evaluator invariants;
-4. pytest positive/negative fixtures;
-5. Hypothesis/property tests;
-6. later mutation testing on scoring kernel.
+1. strict/frozen Python boundary models;
+2. immutable nested report structures rather than mutable containers hidden inside frozen objects;
+3. independent JSON Schema Draft 2020-12 fixtures/contracts;
+4. deterministic evaluator invariants;
+5. pytest positive/negative fixtures;
+6. Hypothesis property/metamorphic tests;
+7. later mutation testing on scoring kernel.
 
 ## Failure behavior
 
@@ -122,11 +141,11 @@ An unsupported/unknown schema version fails explicitly.
 
 ## Privacy boundary
 
-No private transcript loader is implemented in this repository. A future private runner may materialize a public benchmark contract from authorized evidence while keeping raw source outside this repository.
+No private transcript loader is implemented in this repository. A future private runner may materialize a benchmark contract from authorized evidence while keeping raw source and sealed holdout oracles outside this repository.
 
 ## Dependency boundary
 
-v0.1 runtime dependencies should remain limited to typed/schema validation. No donor/LLM framework enters the package before the deterministic evaluator gate passes.
+v0.1 runtime dependencies remain limited to typed/schema validation. No donor/LLM framework enters the package before the deterministic evaluator gate passes.
 
 ## Compatibility
 
