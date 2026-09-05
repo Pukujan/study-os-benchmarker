@@ -28,6 +28,7 @@
         "allowed_next_nodes": {"type": "array", "items": {"type": "string"}},
         "required_bridge_ids": {"type": "array", "items": {"type": "string"}},
         "required_representation": {"type": "array", "items": {"type": "string"}},
+        "forbidden_representation": {"type": "array", "items": {"type": "string"}},
         "forbidden_concepts": {"type": "array", "items": {"type": "string"}},
         "answer_reveal_allowed": {"type": "boolean"},
         "forbidden_answer_literals": {"type": "array", "items": {"type": "string"}}
