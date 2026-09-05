@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "public.fixture.bad-max-answer-leak",
+  "candidate_version": "1.0.0",
+  "proposed_next_node": "probe_changed_max_value",
+  "traversed_bridge_ids": [],
+  "shown_representation": ["i_row", "s_row", "i_to_s_alignment", "max_sum_assignment"],
+  "disclosed_concepts": ["max_builtin", "max_sum_assignment"],
+  "answer_revealed": false,
+  "rendered_text": "i: 0 1 2 3\nS: 10 7 15 9\nmax(S) = 15\nmax_sum = 15\nWhat value gets stored in max_sum?"
+}
