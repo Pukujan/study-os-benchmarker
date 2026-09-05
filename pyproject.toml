@@ -19,6 +19,7 @@ dev = [
   "hypothesis>=6.112,<7",
   "ruff>=0.6,<1",
   "mypy>=1.11,<2",
+  "types-jsonschema",
   "mutmut>=3,<4",
 ]
 
