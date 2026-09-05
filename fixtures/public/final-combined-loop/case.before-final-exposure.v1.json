@@ -1,0 +1,23 @@
+{
+  "schema_version": "benchmark.case.v1",
+  "context": {
+    "schema_version": "benchmark.candidate-context.v1",
+    "case_id": "public.final-combined-loop.before-exposure.v1",
+    "current_node": "arbitrary_k_inner_state_model_validated",
+    "visible_context": [
+      "the stop boundary, first/later-box control, sliding recurrence, max update, range(k), x, and same-S[i] state trace are all grounded",
+      "the learner has asked to see the full loop assembled from those pieces",
+      "this is the first node where complete solution exposure is authorized"
+    ],
+    "visible_representation": ["combined_control_shape", "inner_loop_code", "same_s_state_trace"]
+  },
+  "oracle": {
+    "schema_version": "benchmark.oracle.v1",
+    "allowed_next_nodes": ["expose_final_combined_loop"],
+    "required_bridge_ids": ["assemble_grounded_pieces"],
+    "required_representation": ["full_combined_code", "control_structure_summary"],
+    "forbidden_concepts": ["mastery_claim", "independent_reconstruction_success"],
+    "answer_reveal_allowed": true,
+    "forbidden_answer_literals": []
+  }
+}
