@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "adversarial.illegal-next",
+  "candidate_version": "v0.1",
+  "proposed_next_node": "compare_S1",
+  "traversed_bridge_ids": ["S0_to_Si_when_i0"],
+  "shown_representation": ["array", "index_row", "box", "i_equals_0"],
+  "disclosed_concepts": ["S0_equals_Si_when_i0"],
+  "answer_revealed": false,
+  "rendered_text": "Now move to the next comparison."
+}
