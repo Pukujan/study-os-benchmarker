@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "public.combined-loop.good-len-bridge",
+  "candidate_version": "v1",
+  "proposed_next_node": "explain_len_before_boundary_code",
+  "traversed_bridge_ids": ["len_before_boundary_code"],
+  "shown_representation": ["numbers_row", "len_concept"],
+  "disclosed_concepts": ["len"],
+  "answer_revealed": false,
+  "rendered_text": "len(a) means how many items are in a. Count this changed list before we write the stop condition."
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "public.combined-loop.good-first-box",
+  "candidate_version": "v1",
+  "proposed_next_node": "probe_combine_first_box",
+  "traversed_bridge_ids": ["combine_first_box_before_later_boxes"],
+  "shown_representation": ["index_row", "numbers_row", "window_box", "i_marker", "sum_annotation", "code_skeleton"],
+  "disclosed_concepts": ["combined_first_box_role"],
+  "answer_revealed": false,
+  "rendered_text": "Inside if i == 0, write the two learned first-box lines: make S[i], then initialize max_sum."
+}

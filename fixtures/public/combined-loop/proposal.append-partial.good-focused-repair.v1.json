@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "public.combined-loop.good-focused-append-repair",
+  "candidate_version": "v1",
+  "proposed_next_node": "repair_append_conversion_only",
+  "traversed_bridge_ids": ["si_expression_to_append"],
+  "shown_representation": ["index_row", "numbers_row", "window_box", "recurrence", "representation_bridge", "preserved_correct_part"],
+  "disclosed_concepts": ["append_conversion_repair"],
+  "answer_revealed": true,
+  "rendered_text": "Keep the max condition. The entering term is added. S[i] = expression becomes S.append(expression). Retry only the append line."
+}

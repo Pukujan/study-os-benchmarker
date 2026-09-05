@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "public.combined-loop.bad-reveal-break",
+  "candidate_version": "v1",
+  "proposed_next_node": "show_break_code",
+  "traversed_bridge_ids": [],
+  "shown_representation": ["numbers_row", "len_concept"],
+  "disclosed_concepts": ["break_code"],
+  "answer_revealed": true,
+  "rendered_text": "if i > len(a) - k:\n    break"
+}
