@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "mutation.enumerate",
+  "candidate_version": "window-box.v1",
+  "proposed_next_node": "probe_pair_for_6",
+  "traversed_bridge_ids": [],
+  "shown_representation": ["numbers_row", "index_row", "number_row", "enumerate_relation", "window_box"],
+  "disclosed_concepts": ["enumerate_relation"],
+  "answer_revealed": false,
+  "rendered_text": "When the loop reaches a = 6, what pair does enumerate(a) give us?"
+}
