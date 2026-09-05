@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "public.combined-loop.bad-full-solution",
+  "candidate_version": "v1",
+  "proposed_next_node": "show_final_combined_loop",
+  "traversed_bridge_ids": [],
+  "shown_representation": ["index_row", "numbers_row", "window_box", "i_marker", "sum_annotation", "code_skeleton"],
+  "disclosed_concepts": ["else_branch", "boundary_break", "final_combined_loop"],
+  "answer_revealed": true,
+  "rendered_text": "S.append(a[i] + a[i+1] + a[i+j])\nmax_sum = S[i]\nelse: ...\nif i > len(a) - k: break"
+}
