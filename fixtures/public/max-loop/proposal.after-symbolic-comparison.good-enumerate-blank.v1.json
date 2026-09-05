@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "public.max-loop.good-enumerate-blank",
+  "candidate_version": "v1",
+  "proposed_next_node": "probe_max_loop_enumerate_source",
+  "traversed_bridge_ids": ["reuse_enumerate_on_S"],
+  "shown_representation": ["i_row", "s_row", "code_skeleton"],
+  "disclosed_concepts": ["standalone_max_loop_construction"],
+  "answer_revealed": false,
+  "rendered_text": "for i, num in enumerate( _____ ): What goes in the blank?"
+}
