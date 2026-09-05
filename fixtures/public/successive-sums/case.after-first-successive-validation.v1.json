@@ -1,0 +1,23 @@
+{
+  "schema_version": "benchmark.case.v1",
+  "context": {
+    "schema_version": "benchmark.candidate-context.v1",
+    "case_id": "successive-sums.after-first-successive-validation",
+    "current_node": "sum_i_plus_1_validated",
+    "visible_context": [
+      "The learner has validated the first shifted box.",
+      "A changed successive-sum example is required before general recurrence."
+    ],
+    "visible_representation": ["numbers_row", "current_box", "next_box"]
+  },
+  "oracle": {
+    "schema_version": "benchmark.oracle.v1",
+    "allowed_next_nodes": ["sum_i_plus_2_probe"],
+    "required_bridge_ids": ["successive_sum_i2"],
+    "required_representation": ["numbers_row", "current_box", "next_box"],
+    "forbidden_representation": [],
+    "forbidden_concepts": ["general_recurrence", "python_loop"],
+    "answer_reveal_allowed": false,
+    "forbidden_answer_literals": ["sum[i+2] = 8", "answer is 8"]
+  }
+}
