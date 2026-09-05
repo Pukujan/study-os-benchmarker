@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "fixture.bad.si-answer-leak",
+  "candidate_version": "v1",
+  "proposed_next_node": "probe_si_assignment_changed_example",
+  "traversed_bridge_ids": ["s0_to_si_when_i0"],
+  "shown_representation": ["index_row", "numbers_row", "window_box", "i_marker", "sum_annotation"],
+  "disclosed_concepts": ["s0_to_si_bridge"],
+  "answer_revealed": false,
+  "rendered_text": "Since i = 0, S[0] means S[i], so max_sum = S[i]. Now write that line on the changed chart."
+}
