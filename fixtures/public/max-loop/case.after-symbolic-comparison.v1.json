@@ -1,0 +1,23 @@
+{
+  "schema_version": "benchmark.case.v1",
+  "context": {
+    "schema_version": "benchmark.candidate-context.v1",
+    "case_id": "public.max-loop.after-symbolic-comparison.v1",
+    "current_node": "symbolic_comparison_validated",
+    "visible_context": [
+      "the learner has already written and validated the comparison/update block using S[i]",
+      "the learner declined another repeated comparison exercise and wants to build the standalone max loop",
+      "the next move should reuse enumerate by asking what collection the loop traverses without revealing the full loop"
+    ],
+    "visible_representation": ["i_row", "s_row", "code_skeleton"]
+  },
+  "oracle": {
+    "schema_version": "benchmark.oracle.v1",
+    "allowed_next_nodes": ["probe_max_loop_enumerate_source"],
+    "required_bridge_ids": ["reuse_enumerate_on_S"],
+    "required_representation": ["i_row", "s_row", "code_skeleton"],
+    "forbidden_concepts": ["standalone_max_loop_solution", "combined_loop"],
+    "answer_reveal_allowed": false,
+    "forbidden_answer_literals": ["enumerate(S)", "max_sum = S[0]"]
+  }
+}
