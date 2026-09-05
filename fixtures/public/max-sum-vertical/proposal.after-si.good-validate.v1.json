@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "fixture.good.validate-si",
+  "candidate_version": "v1",
+  "proposed_next_node": "validate_si_assignment_same_chart",
+  "traversed_bridge_ids": [],
+  "shown_representation": ["index_row", "numbers_row", "window_box", "i_marker", "sum_annotation"],
+  "disclosed_concepts": ["s0_to_si_bridge"],
+  "answer_revealed": true,
+  "rendered_text": "Correct. In the same chart i = 0, so S[i] is the first-window sum, 12, and max_sum is therefore 12."
+}
