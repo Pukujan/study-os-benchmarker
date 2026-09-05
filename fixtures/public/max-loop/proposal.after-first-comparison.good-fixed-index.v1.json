@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "public.max-loop.good-fixed-index",
+  "candidate_version": "v1",
+  "proposed_next_node": "probe_fixed_index_comparison_code",
+  "traversed_bridge_ids": [],
+  "shown_representation": ["index_row", "numbers_row", "window_box", "i_marker", "sum_annotation", "max_sum_annotation"],
+  "disclosed_concepts": ["fixed_index_comparison"],
+  "answer_revealed": false,
+  "rendered_text": "Move to the next box and write the Python if code for this exact index."
+}
