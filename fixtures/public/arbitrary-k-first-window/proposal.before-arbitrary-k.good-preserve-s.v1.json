@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "public-fixture",
+  "candidate_version": "arbitrary-k-good-preserve-s-v1",
+  "proposed_next_node": "preserve_S_then_seed_same_S_i",
+  "traversed_bridge_ids": ["reuse_existing_S_state"],
+  "shown_representation": ["index_row", "numbers_row", "window_box", "i_marker", "k_annotation", "existing_sum_state"],
+  "disclosed_concepts": ["arbitrary_k_first_window", "reuse_existing_S_state", "same_s_seed"],
+  "answer_revealed": false,
+  "rendered_text": "Keep the same S notation. For the first box, create the existing S[i] once with S.append(0); next we can ground how x moves through k positions."
+}
