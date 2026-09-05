@@ -1,0 +1,22 @@
+{
+  "schema_version": "benchmark.case.v1",
+  "context": {
+    "schema_version": "benchmark.candidate-context.v1",
+    "case_id": "public.max-sum.after-value-answer.v1",
+    "current_node": "learner_answered_concrete_max_value",
+    "visible_context": [
+      "learner answered 11 for max_sum when max_sum = S[0]",
+      "the next move must first show why that answer is correct in the same chart"
+    ],
+    "visible_representation": ["index_row", "numbers_row", "window_box", "i_marker", "sum_annotation"]
+  },
+  "oracle": {
+    "schema_version": "benchmark.oracle.v1",
+    "allowed_next_nodes": ["validate_value_same_chart"],
+    "required_bridge_ids": [],
+    "required_representation": ["index_row", "numbers_row", "window_box", "i_marker", "sum_annotation"],
+    "forbidden_concepts": ["s0_to_si_bridge", "comparison", "next_window", "max_loop"],
+    "answer_reveal_allowed": true,
+    "forbidden_answer_literals": []
+  }
+}
