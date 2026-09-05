@@ -1,0 +1,24 @@
+{
+  "schema_version": "benchmark.case.v1",
+  "context": {
+    "schema_version": "benchmark.candidate-context.v1",
+    "case_id": "public.max-sum.after-restored-window-sums.v1",
+    "current_node": "verified_window_sum_list",
+    "visible_context": [
+      "the loop-output mapping has been verified",
+      "i aligns with S = [11, 13, 11, 13]",
+      "the next concept is identifying the largest window sum"
+    ],
+    "visible_representation": ["i_row", "s_row", "i_to_s_alignment"]
+  },
+  "oracle": {
+    "schema_version": "benchmark.oracle.v1",
+    "allowed_next_nodes": ["probe_largest_locations"],
+    "required_bridge_ids": [],
+    "required_representation": ["i_row", "s_row", "i_to_s_alignment"],
+    "forbidden_representation": [],
+    "forbidden_concepts": ["max_builtin", "max_sum_assignment", "incremental_max_tracking"],
+    "answer_reveal_allowed": false,
+    "forbidden_answer_literals": ["S[1] and S[3] are largest"]
+  }
+}
