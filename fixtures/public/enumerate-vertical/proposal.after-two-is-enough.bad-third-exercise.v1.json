@@ -1,0 +1,11 @@
+{
+  "schema_version": "benchmark.tutor-proposal.v1",
+  "candidate_id": "mutation.enumerate",
+  "candidate_version": "third-exercise.v1",
+  "proposed_next_node": "probe_pair_for_third",
+  "traversed_bridge_ids": [],
+  "shown_representation": ["numbers_row", "index_row", "number_row", "enumerate_relation"],
+  "disclosed_concepts": ["third_enumerate_exercise"],
+  "answer_revealed": false,
+  "rendered_text": "Let us do one more enumerate example first."
+}
