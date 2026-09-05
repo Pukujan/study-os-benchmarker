@@ -1,0 +1,24 @@
+{
+  "schema_version": "benchmark.case.v1",
+  "context": {
+    "schema_version": "benchmark.candidate-context.v1",
+    "case_id": "public.max-sum.after-max-assignment-explained.v1",
+    "current_node": "max_sum_relation_known_changed_values_needed",
+    "visible_context": [
+      "the learner knows max_sum = max(S)",
+      "use changed S = [10, 7, 15, 9] to verify the relation",
+      "the exercise must not explicitly state the computed max result before asking"
+    ],
+    "visible_representation": ["i_row", "s_row", "i_to_s_alignment", "max_sum_assignment"]
+  },
+  "oracle": {
+    "schema_version": "benchmark.oracle.v1",
+    "allowed_next_nodes": ["probe_changed_max_value"],
+    "required_bridge_ids": [],
+    "required_representation": ["i_row", "s_row", "i_to_s_alignment", "max_sum_assignment"],
+    "forbidden_representation": [],
+    "forbidden_concepts": ["incremental_max_tracking"],
+    "answer_reveal_allowed": false,
+    "forbidden_answer_literals": ["max_sum = 15", "max(S) = 15", "S[2] = 15"]
+  }
+}
