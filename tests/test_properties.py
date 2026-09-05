@@ -1,9 +1,15 @@
 from __future__ import annotations
 
-from hypothesis import given, strategies as st
+from hypothesis import given
+from hypothesis import strategies as st
 
 from study_os_benchmarker.evaluator import evaluate
-from study_os_benchmarker.models import BenchmarkCase, BenchmarkOracle, CandidateContext, TutorProposal
+from study_os_benchmarker.models import (
+    BenchmarkCase,
+    BenchmarkOracle,
+    CandidateContext,
+    TutorProposal,
+)
 
 REQUIRED_REPRESENTATION = ("array", "index_row", "box", "i_equals_0")
 
