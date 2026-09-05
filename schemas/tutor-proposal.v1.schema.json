@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pukujan.github.io/study-os-benchmarker/schemas/tutor-proposal.v1.schema.json",
+  "title": "Study OS Tutor Proposal v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "candidate_id", "candidate_version", "proposed_next_node", "traversed_bridge_ids", "shown_representation", "disclosed_concepts", "answer_revealed", "rendered_text"],
+  "properties": {
+    "schema_version": {"const": "benchmark.tutor-proposal.v1"},
+    "candidate_id": {"type": "string", "minLength": 1},
+    "candidate_version": {"type": "string", "minLength": 1},
+    "proposed_next_node": {"type": "string", "minLength": 1},
+    "traversed_bridge_ids": {"type": "array", "items": {"type": "string"}},
+    "shown_representation": {"type": "array", "items": {"type": "string"}},
+    "disclosed_concepts": {"type": "array", "items": {"type": "string"}},
+    "answer_revealed": {"type": "boolean"},
+    "rendered_text": {"type": "string"}
+  }
+}
