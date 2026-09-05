@@ -1,0 +1,23 @@
+{
+  "schema_version": "benchmark.case.v1",
+  "context": {
+    "schema_version": "benchmark.candidate-context.v1",
+    "case_id": "public.arbitrary-k.after-inner-update.v1",
+    "current_node": "same_S_i_update_line_validated",
+    "visible_context": [
+      "the learner has the inner x-loop update line",
+      "i and k must stay fixed while x changes",
+      "the source requires current S[i] to be visible before each x chart and the old + current number -> new transition to be shown"
+    ],
+    "visible_representation": ["index_row", "numbers_row", "window_box", "i_marker", "k_annotation", "x_sequence", "current_s_before"]
+  },
+  "oracle": {
+    "schema_version": "benchmark.oracle.v1",
+    "allowed_next_nodes": ["render_x0_state"],
+    "required_bridge_ids": ["same_S_i_state_trace"],
+    "required_representation": ["index_row", "numbers_row", "window_box", "i_marker", "k_annotation", "x_marker", "current_s_before", "current_number", "state_transition"],
+    "forbidden_concepts": ["final_combined_loop", "mastery_claim"],
+    "answer_reveal_allowed": false,
+    "forbidden_answer_literals": []
+  }
+}
