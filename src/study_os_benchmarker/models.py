@@ -29,6 +29,7 @@ class BenchmarkOracle(StrictFrozenModel):
     allowed_next_nodes: tuple[str, ...] = ()
     required_bridge_ids: tuple[str, ...] = ()
     required_representation: tuple[str, ...] = ()
+    forbidden_representation: tuple[str, ...] = ()
     forbidden_concepts: tuple[str, ...] = ()
     answer_reveal_allowed: bool = False
     forbidden_answer_literals: tuple[str, ...] = ()
@@ -56,6 +57,7 @@ class ViolationCode(StrEnum):
     ILLEGAL_NEXT_NODE = "ILLEGAL_NEXT_NODE"
     MISSING_REQUIRED_BRIDGE = "MISSING_REQUIRED_BRIDGE"
     MISSING_REPRESENTATION = "MISSING_REPRESENTATION"
+    FORBIDDEN_REPRESENTATION_PRESENT = "FORBIDDEN_REPRESENTATION_PRESENT"
     FORBIDDEN_CONCEPT_DISCLOSED = "FORBIDDEN_CONCEPT_DISCLOSED"
     ANSWER_REVEAL_FORBIDDEN = "ANSWER_REVEAL_FORBIDDEN"
 
@@ -69,6 +71,7 @@ class MetricSummary(StrictFrozenModel):
     legal_next_node: bool
     required_bridges_preserved: bool
     representation_preserved: bool
+    forbidden_representation_absent: bool
     forbidden_concepts_absent: bool
     answer_policy_satisfied: bool
 
