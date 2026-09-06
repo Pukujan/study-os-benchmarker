@@ -125,12 +125,12 @@ def evaluate_decomposition(
 
     positions = _concept_positions(projection)
     bad_orderings: list[str] = []
-    for requirement in oracle.required_orderings:
-        before = positions.get(requirement.before_concept)
-        after = positions.get(requirement.after_concept)
+    for ordering_requirement in oracle.required_orderings:
+        before = positions.get(ordering_requirement.before_concept)
+        after = positions.get(ordering_requirement.after_concept)
         if before is not None and after is not None and before >= after:
             bad_orderings.append(
-                f"{requirement.before_concept}->{requirement.after_concept}"
+                f"{ordering_requirement.before_concept}->{ordering_requirement.after_concept}"
             )
     ordering_valid = not bad_orderings
     if bad_orderings:
@@ -142,16 +142,20 @@ def evaluate_decomposition(
         )
 
     representation_failures: list[str] = []
-    for requirement in oracle.required_representations:
+    for representation_requirement in oracle.required_representations:
         matching_steps = tuple(
-            step for step in projection.steps if requirement.concept_id in step.introduces
+            step
+            for step in projection.steps
+            if representation_requirement.concept_id in step.introduces
         )
         if not matching_steps or all(
-            requirement.representation_id not in step.representation_requirements
+            representation_requirement.representation_id
+            not in step.representation_requirements
             for step in matching_steps
         ):
             representation_failures.append(
-                f"{requirement.concept_id}:{requirement.representation_id}"
+                f"{representation_requirement.concept_id}:"
+                f"{representation_requirement.representation_id}"
             )
     representation_valid = not representation_failures
     if representation_failures:
