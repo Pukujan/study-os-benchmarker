@@ -1,0 +1,37 @@
+{
+  "schema_version": "benchmark.decomposition-oracle.v1",
+  "case_id": "dev.dsa.two-pointers.v0",
+  "required_concepts": [
+    "index",
+    "sorted_order",
+    "left_pointer",
+    "right_pointer",
+    "pair_sum",
+    "compare_target",
+    "move_left",
+    "move_right",
+    "crossing_termination",
+    "repeat"
+  ],
+  "required_orderings": [
+    {"before_concept": "left_pointer", "after_concept": "pair_sum"},
+    {"before_concept": "right_pointer", "after_concept": "pair_sum"},
+    {"before_concept": "pair_sum", "after_concept": "compare_target"},
+    {"before_concept": "compare_target", "after_concept": "move_left"},
+    {"before_concept": "compare_target", "after_concept": "move_right"},
+    {"before_concept": "crossing_termination", "after_concept": "repeat"},
+    {"before_concept": "move_left", "after_concept": "repeat"},
+    {"before_concept": "move_right", "after_concept": "repeat"}
+  ],
+  "required_representations": [
+    {"concept_id": "left_pointer", "representation_id": "array_with_two_pointer_markers"},
+    {"concept_id": "right_pointer", "representation_id": "array_with_two_pointer_markers"},
+    {"concept_id": "pair_sum", "representation_id": "selected_pair_with_sum"},
+    {"concept_id": "crossing_termination", "representation_id": "pointer_boundary_state"}
+  ],
+  "required_invariants": [
+    "sorted order makes pointer movement directional with respect to the target sum"
+  ],
+  "forbidden_concepts": [],
+  "max_new_concepts_per_step": 1
+}

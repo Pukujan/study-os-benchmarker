@@ -1,0 +1,42 @@
+{
+  "schema_version": "benchmark.decomposition-oracle.v1",
+  "case_id": "dev.dsa.binary-search.v0",
+  "required_concepts": [
+    "index",
+    "array_value_lookup",
+    "sorted_order",
+    "target",
+    "search_interval",
+    "left_bound",
+    "right_bound",
+    "midpoint",
+    "middle_value",
+    "compare_target",
+    "eliminate_half",
+    "repeat_search",
+    "termination"
+  ],
+  "required_orderings": [
+    {"before_concept": "index", "after_concept": "array_value_lookup"},
+    {"before_concept": "search_interval", "after_concept": "left_bound"},
+    {"before_concept": "search_interval", "after_concept": "right_bound"},
+    {"before_concept": "left_bound", "after_concept": "midpoint"},
+    {"before_concept": "right_bound", "after_concept": "midpoint"},
+    {"before_concept": "midpoint", "after_concept": "middle_value"},
+    {"before_concept": "middle_value", "after_concept": "compare_target"},
+    {"before_concept": "compare_target", "after_concept": "eliminate_half"},
+    {"before_concept": "eliminate_half", "after_concept": "repeat_search"},
+    {"before_concept": "repeat_search", "after_concept": "termination"}
+  ],
+  "required_representations": [
+    {"concept_id": "index", "representation_id": "array_with_index_row"},
+    {"concept_id": "search_interval", "representation_id": "highlighted_search_region"},
+    {"concept_id": "midpoint", "representation_id": "middle_index_marker"},
+    {"concept_id": "eliminate_half", "representation_id": "updated_search_region"}
+  ],
+  "required_invariants": [
+    "if target exists, it remains inside the active search interval"
+  ],
+  "forbidden_concepts": [],
+  "max_new_concepts_per_step": 1
+}
