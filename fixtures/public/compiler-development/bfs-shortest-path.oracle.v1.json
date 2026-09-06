@@ -1,0 +1,38 @@
+{
+  "schema_version": "benchmark.decomposition-oracle.v1",
+  "case_id": "dev.dsa.bfs-shortest-path.v0",
+  "required_concepts": [
+    "graph_node",
+    "neighbor",
+    "queue_frontier",
+    "visited",
+    "dequeue",
+    "inspect_neighbors",
+    "enqueue_unseen",
+    "distance",
+    "repeat_frontier"
+  ],
+  "required_orderings": [
+    {"before_concept": "graph_node", "after_concept": "neighbor"},
+    {"before_concept": "queue_frontier", "after_concept": "dequeue"},
+    {"before_concept": "dequeue", "after_concept": "inspect_neighbors"},
+    {"before_concept": "neighbor", "after_concept": "inspect_neighbors"},
+    {"before_concept": "visited", "after_concept": "enqueue_unseen"},
+    {"before_concept": "inspect_neighbors", "after_concept": "enqueue_unseen"},
+    {"before_concept": "enqueue_unseen", "after_concept": "distance"},
+    {"before_concept": "distance", "after_concept": "repeat_frontier"}
+  ],
+  "required_representations": [
+    {"concept_id": "graph_node", "representation_id": "graph_with_node_labels"},
+    {"concept_id": "queue_frontier", "representation_id": "graph_with_queue"},
+    {"concept_id": "visited", "representation_id": "graph_with_visited_state"},
+    {"concept_id": "dequeue", "representation_id": "queue_head_marker"},
+    {"concept_id": "enqueue_unseen", "representation_id": "queue_and_graph_transition"}
+  ],
+  "required_invariants": [
+    "a node is enqueued at most once",
+    "first discovery gives shortest edge distance in an unweighted graph"
+  ],
+  "forbidden_concepts": [],
+  "max_new_concepts_per_step": 1
+}
